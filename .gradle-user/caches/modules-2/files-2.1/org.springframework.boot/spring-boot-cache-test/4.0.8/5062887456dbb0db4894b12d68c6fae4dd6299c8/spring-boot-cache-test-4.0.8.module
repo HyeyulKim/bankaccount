@@ -1,0 +1,132 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "org.springframework.boot",
+    "module": "spring-boot-cache-test",
+    "version": "4.0.8",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "9.7.0"
+    }
+  },
+  "variants": [
+    {
+      "name": "apiElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 17,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api"
+      },
+      "dependencies": [
+        {
+          "group": "org.springframework.boot",
+          "module": "spring-boot-test-autoconfigure",
+          "version": {
+            "requires": "4.0.8"
+          }
+        },
+        {
+          "group": "org.springframework.boot",
+          "module": "spring-boot-cache",
+          "version": {
+            "requires": "4.0.8"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "spring-boot-cache-test-4.0.8.jar",
+          "url": "spring-boot-cache-test-4.0.8.jar",
+          "size": 7183,
+          "sha512": "940da72d9adeae04a74917fe1fb7d8023ad51f83d1ad397e7efda5d4e7b2f7f901cfcdee8a4923716745276ba4708fa91fd590ae7aacd51a971cb85cc8261585",
+          "sha256": "d9d81dcff64d50b3529afd681cda630d3dfe3ddec73c11cce10b18d8e18c2bbe",
+          "sha1": "25521fafd35618ecf2e556abd1907ae0593e465c",
+          "md5": "43dbb0ee02b5b81d88843e4f911cbfe7"
+        }
+      ]
+    },
+    {
+      "name": "runtimeElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 17,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime"
+      },
+      "dependencies": [
+        {
+          "group": "org.springframework.boot",
+          "module": "spring-boot-test-autoconfigure",
+          "version": {
+            "requires": "4.0.8"
+          }
+        },
+        {
+          "group": "org.springframework.boot",
+          "module": "spring-boot-cache",
+          "version": {
+            "requires": "4.0.8"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "spring-boot-cache-test-4.0.8.jar",
+          "url": "spring-boot-cache-test-4.0.8.jar",
+          "size": 7183,
+          "sha512": "940da72d9adeae04a74917fe1fb7d8023ad51f83d1ad397e7efda5d4e7b2f7f901cfcdee8a4923716745276ba4708fa91fd590ae7aacd51a971cb85cc8261585",
+          "sha256": "d9d81dcff64d50b3529afd681cda630d3dfe3ddec73c11cce10b18d8e18c2bbe",
+          "sha1": "25521fafd35618ecf2e556abd1907ae0593e465c",
+          "md5": "43dbb0ee02b5b81d88843e4f911cbfe7"
+        }
+      ]
+    },
+    {
+      "name": "javadocElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "javadoc",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "spring-boot-cache-test-4.0.8-javadoc.jar",
+          "url": "spring-boot-cache-test-4.0.8-javadoc.jar",
+          "size": 106633,
+          "sha512": "af589df869a17ac9946e6b3521553aafe51cd1f87b977a2f680c103461e45aebc13229f60465c1fb98ab19bcea715af3f1bb1a600dae2799b7dfec620872bd06",
+          "sha256": "180b422b47e3fb787a2c064e156356c1f0cb8ad301a6d33e797926aa46414d91",
+          "sha1": "bbabd165eaf37ff507034a021cb5da0b959930e6",
+          "md5": "68880f09a55ab98a571245fd0e47633c"
+        }
+      ]
+    },
+    {
+      "name": "sourcesElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "spring-boot-cache-test-4.0.8-sources.jar",
+          "url": "spring-boot-cache-test-4.0.8-sources.jar",
+          "size": 7947,
+          "sha512": "e4dc9b62716523c93a33cc7e0bda668c6176b958018faca089e8cb65ac443455812493d29ab23cb24a252fdbfa26d2ff6252e82a8a7b2594b93da0bbedc68940",
+          "sha256": "917da0801a221ad09feb28b23ee36c4a76fd99c79a4950a93dcc90df156d4b75",
+          "sha1": "2dbf184748f979c4cc63b3c57306e096662aadd6",
+          "md5": "be418279a4b6fe511a4d92d94595c369"
+        }
+      ]
+    }
+  ]
+}

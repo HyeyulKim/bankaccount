@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<title>계좌 조회</title>
+	<style>
+		body {
+			font-family: Arial, sans-serif;
+			background: #f3f5f8;
+			color: #172b4d
+		}
+
+		.wrap {
+			max-width: 900px;
+			margin: auto;
+			padding: 42px 24px
+		}
+
+		.card {
+			background: #fff;
+			padding: 24px;
+			border-radius: 12px;
+			box-shadow: 0 3px 15px #0001;
+			margin-top: 18px
+		}
+
+		input {
+			padding: 11px;
+			border: 1px solid #cbd5e1;
+			border-radius: 7px;
+			margin-right: 6px
+		}
+
+		button,
+		a {
+			padding: 11px 14px;
+			border: 0;
+			border-radius: 7px;
+			background: #1d4e89;
+			color: #fff;
+			text-decoration: none;
+			cursor: pointer
+		}
+
+		table {
+			width: 100%;
+			border-collapse: collapse;
+			margin-top: 18px
+		}
+
+		th,
+		td {
+			padding: 12px;
+			border-bottom: 1px solid #e2e8f0;
+			text-align: left
+		}
+
+		.empty {
+			color: #64748b
+		}
+	</style>
+</head>
+
+<body>
+	<main class="wrap"><a th:href="@{/accounts}">전체 목록</a>
+		<h1>계좌 조회</h1>
+		<section class="card">
+			<form th:action="@{/accounts/search}" method="get"><input name="accountNo" th:value="${accountNo}"
+					placeholder="계좌번호"><input name="name" th:value="${name}" placeholder="소유자명"><button
+					type="submit">조회</button></form>
+		</section>
+		<section class="card">
+			<h2>조회 결과</h2>
+			<table th:if="${!#lists.isEmpty(results)}">
+				<thead>
+					<tr>
+						<th>계좌번호</th>
+						<th>소유자명</th>
+						<th>잔액</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr th:each="account : ${results}">
+						<td><a th:href="@{/accounts/{no}(no=${account.accountNo})}"
+								th:text="${account.accountNo}">번호</a></td>
+						<td th:text="${account.name}">이름</td>
+						<td th:text="${#numbers.formatInteger(account.balance,3,'COMMA')} + '원'">0원</td>
+					</tr>
+				</tbody>
+			</table>
+			<p class="empty" th:if="${#lists.isEmpty(results)}">검색 결과가 없습니다.</p>
+		</section>
+	</main>
+</body>
+
+</html>

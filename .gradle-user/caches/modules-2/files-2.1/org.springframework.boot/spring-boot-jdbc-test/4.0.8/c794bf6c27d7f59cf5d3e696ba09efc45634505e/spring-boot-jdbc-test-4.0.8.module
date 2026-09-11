@@ -1,0 +1,132 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "org.springframework.boot",
+    "module": "spring-boot-jdbc-test",
+    "version": "4.0.8",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "9.7.0"
+    }
+  },
+  "variants": [
+    {
+      "name": "apiElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 17,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api"
+      },
+      "dependencies": [
+        {
+          "group": "org.springframework.boot",
+          "module": "spring-boot-test-autoconfigure",
+          "version": {
+            "requires": "4.0.8"
+          }
+        },
+        {
+          "group": "org.springframework.boot",
+          "module": "spring-boot-jdbc",
+          "version": {
+            "requires": "4.0.8"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "spring-boot-jdbc-test-4.0.8.jar",
+          "url": "spring-boot-jdbc-test-4.0.8.jar",
+          "size": 21154,
+          "sha512": "46f80ebf2051c1c76a92b37d9e2b56ca8f70a7bef9bdffd544efcf1acfaf0c46217e02d73276300491b0677c5957995a478bc8fadbf268d0cc2dbfdba9e9387e",
+          "sha256": "93d0688075742409efe9cd442698e31316549bcba98a7b9f56a69d33ce69c498",
+          "sha1": "16ca34671e86a19953dcfaa11cbd66ac88a81d10",
+          "md5": "352356d7d0af4a9e9233e2992854e624"
+        }
+      ]
+    },
+    {
+      "name": "runtimeElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 17,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime"
+      },
+      "dependencies": [
+        {
+          "group": "org.springframework.boot",
+          "module": "spring-boot-test-autoconfigure",
+          "version": {
+            "requires": "4.0.8"
+          }
+        },
+        {
+          "group": "org.springframework.boot",
+          "module": "spring-boot-jdbc",
+          "version": {
+            "requires": "4.0.8"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "spring-boot-jdbc-test-4.0.8.jar",
+          "url": "spring-boot-jdbc-test-4.0.8.jar",
+          "size": 21154,
+          "sha512": "46f80ebf2051c1c76a92b37d9e2b56ca8f70a7bef9bdffd544efcf1acfaf0c46217e02d73276300491b0677c5957995a478bc8fadbf268d0cc2dbfdba9e9387e",
+          "sha256": "93d0688075742409efe9cd442698e31316549bcba98a7b9f56a69d33ce69c498",
+          "sha1": "16ca34671e86a19953dcfaa11cbd66ac88a81d10",
+          "md5": "352356d7d0af4a9e9233e2992854e624"
+        }
+      ]
+    },
+    {
+      "name": "javadocElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "javadoc",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "spring-boot-jdbc-test-4.0.8-javadoc.jar",
+          "url": "spring-boot-jdbc-test-4.0.8-javadoc.jar",
+          "size": 121470,
+          "sha512": "05d9f636ad42dae1ff3c28380971332f7a9c301396729fb1502d591806a73265d7c547647e04b30ee9f7fb1d265f397225a3a8bb03cced5f2934be874e2470e3",
+          "sha256": "a72c61c1214293fe85092d5593edc907f7c12a6b659b7aae93f33c5d0b7c539b",
+          "sha1": "6ff473f25e7d075e5ac7d4d915f0dd42e9425995",
+          "md5": "f91dfeb2725e66993d7915ff02c56557"
+        }
+      ]
+    },
+    {
+      "name": "sourcesElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "spring-boot-jdbc-test-4.0.8-sources.jar",
+          "url": "spring-boot-jdbc-test-4.0.8-sources.jar",
+          "size": 17197,
+          "sha512": "9e3ac9867cf2419d1570b4fa1c5b189424859295af2fd99daf5d02bd5b9de6b91e791bf89ec95f436bd5ae4e1e2e11b1ec4e9596c3400ead7110a5d0218d753f",
+          "sha256": "228cfbb3bd22b7d7a7fea34d17c36d4670f569048dfe39edcfaa2aecda74f3fc",
+          "sha1": "0819544250f2ecf5d793e1aae80afedb4a16c024",
+          "md5": "eaae95ce473710b7f65694812fe3c439"
+        }
+      ]
+    }
+  ]
+}

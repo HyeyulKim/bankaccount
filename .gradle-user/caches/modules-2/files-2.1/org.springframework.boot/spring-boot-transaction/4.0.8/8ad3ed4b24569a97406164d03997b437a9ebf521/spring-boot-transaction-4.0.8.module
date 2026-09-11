@@ -1,0 +1,146 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "org.springframework.boot",
+    "module": "spring-boot-transaction",
+    "version": "4.0.8",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "9.7.0"
+    }
+  },
+  "variants": [
+    {
+      "name": "apiElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 17,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api"
+      },
+      "dependencies": [
+        {
+          "group": "org.springframework.boot",
+          "module": "spring-boot",
+          "version": {
+            "requires": "4.0.8"
+          }
+        },
+        {
+          "group": "org.springframework.boot",
+          "module": "spring-boot-persistence",
+          "version": {
+            "requires": "4.0.8"
+          }
+        },
+        {
+          "group": "org.springframework",
+          "module": "spring-tx",
+          "version": {
+            "requires": "7.0.9"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "spring-boot-transaction-4.0.8.jar",
+          "url": "spring-boot-transaction-4.0.8.jar",
+          "size": 21031,
+          "sha512": "2175b095319c0ec970487fbfabecee3253ceedabf31e7e408d8604c370b7279775f710e3499e17d418f33b7c704ad59f3a19d12a05d25a50e663f1ec78abbf3d",
+          "sha256": "cf86b197ceb6f352ec32c8a1374520c2361c8b2c08ec0dca2753480d097dcfc6",
+          "sha1": "4e47fb913c3957ee46a93df575c57e2ca1dc9cd8",
+          "md5": "be8111289467a5496c9699894d93a3f9"
+        }
+      ]
+    },
+    {
+      "name": "runtimeElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 17,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime"
+      },
+      "dependencies": [
+        {
+          "group": "org.springframework.boot",
+          "module": "spring-boot",
+          "version": {
+            "requires": "4.0.8"
+          }
+        },
+        {
+          "group": "org.springframework.boot",
+          "module": "spring-boot-persistence",
+          "version": {
+            "requires": "4.0.8"
+          }
+        },
+        {
+          "group": "org.springframework",
+          "module": "spring-tx",
+          "version": {
+            "requires": "7.0.9"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "spring-boot-transaction-4.0.8.jar",
+          "url": "spring-boot-transaction-4.0.8.jar",
+          "size": 21031,
+          "sha512": "2175b095319c0ec970487fbfabecee3253ceedabf31e7e408d8604c370b7279775f710e3499e17d418f33b7c704ad59f3a19d12a05d25a50e663f1ec78abbf3d",
+          "sha256": "cf86b197ceb6f352ec32c8a1374520c2361c8b2c08ec0dca2753480d097dcfc6",
+          "sha1": "4e47fb913c3957ee46a93df575c57e2ca1dc9cd8",
+          "md5": "be8111289467a5496c9699894d93a3f9"
+        }
+      ]
+    },
+    {
+      "name": "javadocElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "javadoc",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "spring-boot-transaction-4.0.8-javadoc.jar",
+          "url": "spring-boot-transaction-4.0.8-javadoc.jar",
+          "size": 126658,
+          "sha512": "7c248797f9c98c57f50c20fd5ee323651c6ec90ac971cbe71944aa339100f47b6026afa3c15e3b019785cbfd750f6251a58c4b4ad9165ab5529504295bd2fbd9",
+          "sha256": "42b730a3b7a60c296883e9ff838f33e075c2af0ec6d6f07e38357b14eebd2700",
+          "sha1": "3bb00effde7a4812f41e8e29c8d28a1a9e0e469e",
+          "md5": "b49a77d13a8e1d3d788b85c01f30dd6a"
+        }
+      ]
+    },
+    {
+      "name": "sourcesElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "spring-boot-transaction-4.0.8-sources.jar",
+          "url": "spring-boot-transaction-4.0.8-sources.jar",
+          "size": 16436,
+          "sha512": "b047fda9109d8c00c1ad273b48c5a6359c0f20e6a7105cd7730a648f771b0e3ce9a1059c74d971f5738945a04c71e0ea705c832d75aee5c2542c45e6c8d152a1",
+          "sha256": "3a296c25d5d5fdce6a14398e481bd566e028d665a8ad3722174bd01981df75f0",
+          "sha1": "26efb0b39fd5811d116df050134f19cbcbcc0057",
+          "md5": "10e7d928ad1836039f217482c80f3c5d"
+        }
+      ]
+    }
+  ]
+}

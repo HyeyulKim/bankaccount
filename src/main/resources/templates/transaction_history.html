@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<title>거래내역</title>
+	<style>
+		body {
+			font-family: Arial, sans-serif;
+			background: #f3f5f8;
+			color: #172b4d
+		}
+
+		.wrap {
+			max-width: 900px;
+			margin: auto;
+			padding: 42px 24px
+		}
+
+		.card {
+			background: #fff;
+			padding: 24px;
+			border-radius: 12px;
+			box-shadow: 0 3px 15px #0001;
+			margin-top: 20px
+		}
+
+		a {
+			display: inline-block;
+			padding: 10px 14px;
+			border-radius: 7px;
+			background: #1d4e89;
+			color: #fff;
+			text-decoration: none
+		}
+
+		table {
+			width: 100%;
+			border-collapse: collapse;
+			margin-top: 16px
+		}
+
+		th,
+		td {
+			padding: 13px;
+			border-bottom: 1px solid #e2e8f0;
+			text-align: left
+		}
+
+		.in {
+			color: #19764b;
+			font-weight: bold
+		}
+
+		.out {
+			color: #b03a32;
+			font-weight: bold
+		}
+
+		.empty {
+			color: #64748b
+		}
+	</style>
+</head>
+
+<body>
+	<main class="wrap"><a th:href="@{/accounts/{no}(no=${account.accountNo})}">계좌 상세</a>
+		<section class="card">
+			<h1 th:text="${account.accountNo + ' 거래내역'}">거래내역</h1>
+			<p th:text="${account.name + ' · 현재 잔액 ' + #numbers.formatInteger(account.balance,3,'COMMA') + '원'}">계좌 정보
+			</p>
+			<table th:if="${!#lists.isEmpty(transactions)}">
+				<thead>
+					<tr>
+						<th>거래시각</th>
+						<th>구분</th>
+						<th>금액</th>
+						<th>거래 후 잔액</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr th:each="tx : ${transactions}">
+						<td th:text="${#temporals.format(tx.transactionDatetime,'yyyy-MM-dd HH:mm:ss')}">시간</td>
+						<td th:text="${tx.kind}" th:classappend="${tx.kind == '입금'} ? 'in' : 'out'">입금</td>
+						<td th:text="${#numbers.formatInteger(tx.amount,3,'COMMA')} + '원'">0원</td>
+						<td th:text="${#numbers.formatInteger(tx.balance,3,'COMMA')} + '원'">0원</td>
+					</tr>
+				</tbody>
+			</table>
+			<p class="empty" th:if="${#lists.isEmpty(transactions)}">거래내역이 없습니다.</p>
+		</section>
+	</main>
+</body>
+
+</html>

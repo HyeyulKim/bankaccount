@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="kr.or.oti.bankaccount.mapper.BankMapper">
+    <insert id="insert" parameterType="BankDTO" useGeneratedKeys="true" keyProperty="bankId" keyColumn="BANK_ID">INSERT INTO bank (bank_name, total_account) VALUES (#{bankName}, 0)</insert>
+    <select id="findById" resultType="BankDTO">SELECT bank_id, bank_name, total_account FROM bank WHERE bank_id = #{bankId}</select>
+    <select id="findAll" resultType="BankDTO">SELECT bank_id, bank_name, total_account FROM bank ORDER BY bank_id</select>
+    <update id="update" parameterType="BankDTO">UPDATE bank SET bank_name = #{bankName} WHERE bank_id = #{bankId}</update>
+    <delete id="delete">DELETE FROM bank WHERE bank_id = #{bankId}</delete>
+    <update id="increaseTotalAccount">UPDATE bank SET total_account = total_account + 1 WHERE bank_id = #{bankId}</update>
+    <update id="decreaseTotalAccount">UPDATE bank SET total_account = total_account - 1 WHERE bank_id = #{bankId}</update>
+</mapper>

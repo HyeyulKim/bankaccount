@@ -1,0 +1,132 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "org.springframework.boot",
+    "module": "spring-boot-cache",
+    "version": "4.0.8",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "9.7.0"
+    }
+  },
+  "variants": [
+    {
+      "name": "apiElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 17,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api"
+      },
+      "dependencies": [
+        {
+          "group": "org.springframework.boot",
+          "module": "spring-boot",
+          "version": {
+            "requires": "4.0.8"
+          }
+        },
+        {
+          "group": "org.springframework",
+          "module": "spring-context-support",
+          "version": {
+            "requires": "7.0.9"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "spring-boot-cache-4.0.8.jar",
+          "url": "spring-boot-cache-4.0.8.jar",
+          "size": 84470,
+          "sha512": "43c9d70fe39c901d34bea2bf176c2e6a2541701d89c26952d8622a160195d30e6b406f08b248b6adc8f61bb8fc35c191793c7c54d6389b990c742402dd535a88",
+          "sha256": "017f341f436cd733618f92f6f5b50bf5a60162d7d2ea12011446ec2bba59d0c4",
+          "sha1": "d18527912b7ff1f9b62edcfdffd5dbd5761b99af",
+          "md5": "048322951c23a71075315299cc098d3b"
+        }
+      ]
+    },
+    {
+      "name": "runtimeElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 17,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime"
+      },
+      "dependencies": [
+        {
+          "group": "org.springframework.boot",
+          "module": "spring-boot",
+          "version": {
+            "requires": "4.0.8"
+          }
+        },
+        {
+          "group": "org.springframework",
+          "module": "spring-context-support",
+          "version": {
+            "requires": "7.0.9"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "spring-boot-cache-4.0.8.jar",
+          "url": "spring-boot-cache-4.0.8.jar",
+          "size": 84470,
+          "sha512": "43c9d70fe39c901d34bea2bf176c2e6a2541701d89c26952d8622a160195d30e6b406f08b248b6adc8f61bb8fc35c191793c7c54d6389b990c742402dd535a88",
+          "sha256": "017f341f436cd733618f92f6f5b50bf5a60162d7d2ea12011446ec2bba59d0c4",
+          "sha1": "d18527912b7ff1f9b62edcfdffd5dbd5761b99af",
+          "md5": "048322951c23a71075315299cc098d3b"
+        }
+      ]
+    },
+    {
+      "name": "javadocElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "javadoc",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "spring-boot-cache-4.0.8-javadoc.jar",
+          "url": "spring-boot-cache-4.0.8-javadoc.jar",
+          "size": 220238,
+          "sha512": "4a8f87cf057864c11bcf27df9af39cf96ca43beb365d34a94c5926cf8c76ee8779e47d46c364f54841dde9531481e70468da90963758d87afd65ef6378940a99",
+          "sha256": "40ad28b4d9c77ba68e03da66c0cf775c1ec5ef8130ada7e2173e5d88f6333765",
+          "sha1": "ece4f07b1c87685023dbbfea4a3feec176b4e39d",
+          "md5": "92a31cf2af0f86f75a9d3410724b74ad"
+        }
+      ]
+    },
+    {
+      "name": "sourcesElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "spring-boot-cache-4.0.8-sources.jar",
+          "url": "spring-boot-cache-4.0.8-sources.jar",
+          "size": 54857,
+          "sha512": "ac9665330059cd8ada4ff0e09dec798c3d22b1c0f7bdc20fee199e55fb2928253459855ba88f0975e0c6337d41286703f7a9448a3c5ec28dc1d643919938c60b",
+          "sha256": "d70f44e8f7d97ac35e1558a79755dea5b8384a31d0f352e9843a3db78a33116a",
+          "sha1": "64d0352abc796bec11dbf77abc8c21c17a88e9ae",
+          "md5": "67e0928c681a07d6b557bab137b390f3"
+        }
+      ]
+    }
+  ]
+}

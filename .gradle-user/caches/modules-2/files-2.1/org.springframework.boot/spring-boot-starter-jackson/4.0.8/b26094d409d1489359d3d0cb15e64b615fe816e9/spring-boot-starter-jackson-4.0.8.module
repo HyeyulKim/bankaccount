@@ -1,0 +1,132 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "org.springframework.boot",
+    "module": "spring-boot-starter-jackson",
+    "version": "4.0.8",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "9.7.0"
+    }
+  },
+  "variants": [
+    {
+      "name": "apiElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 17,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api"
+      },
+      "dependencies": [
+        {
+          "group": "org.springframework.boot",
+          "module": "spring-boot-starter",
+          "version": {
+            "requires": "4.0.8"
+          }
+        },
+        {
+          "group": "org.springframework.boot",
+          "module": "spring-boot-jackson",
+          "version": {
+            "requires": "4.0.8"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "spring-boot-starter-jackson-4.0.8.jar",
+          "url": "spring-boot-starter-jackson-4.0.8.jar",
+          "size": 4741,
+          "sha512": "8f3f7f2c3040646c0c019b40c9deb4aabdd330f1d3c7fe46dfc1f9ff6773610529aff1f5a6b443d9262de78aa8b37980533f9d01b2219c025aab6de47f394bad",
+          "sha256": "440f0eba9127e876473b165140139e52ec658f5ca5a2d4fada4382d618148894",
+          "sha1": "9afb1a670229e3c1c00bbae6482cb66505a9c176",
+          "md5": "984b565388774b32c5726ef13691c792"
+        }
+      ]
+    },
+    {
+      "name": "runtimeElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 17,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime"
+      },
+      "dependencies": [
+        {
+          "group": "org.springframework.boot",
+          "module": "spring-boot-starter",
+          "version": {
+            "requires": "4.0.8"
+          }
+        },
+        {
+          "group": "org.springframework.boot",
+          "module": "spring-boot-jackson",
+          "version": {
+            "requires": "4.0.8"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "spring-boot-starter-jackson-4.0.8.jar",
+          "url": "spring-boot-starter-jackson-4.0.8.jar",
+          "size": 4741,
+          "sha512": "8f3f7f2c3040646c0c019b40c9deb4aabdd330f1d3c7fe46dfc1f9ff6773610529aff1f5a6b443d9262de78aa8b37980533f9d01b2219c025aab6de47f394bad",
+          "sha256": "440f0eba9127e876473b165140139e52ec658f5ca5a2d4fada4382d618148894",
+          "sha1": "9afb1a670229e3c1c00bbae6482cb66505a9c176",
+          "md5": "984b565388774b32c5726ef13691c792"
+        }
+      ]
+    },
+    {
+      "name": "javadocElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "javadoc",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "spring-boot-starter-jackson-4.0.8-javadoc.jar",
+          "url": "spring-boot-starter-jackson-4.0.8-javadoc.jar",
+          "size": 4741,
+          "sha512": "8f3f7f2c3040646c0c019b40c9deb4aabdd330f1d3c7fe46dfc1f9ff6773610529aff1f5a6b443d9262de78aa8b37980533f9d01b2219c025aab6de47f394bad",
+          "sha256": "440f0eba9127e876473b165140139e52ec658f5ca5a2d4fada4382d618148894",
+          "sha1": "9afb1a670229e3c1c00bbae6482cb66505a9c176",
+          "md5": "984b565388774b32c5726ef13691c792"
+        }
+      ]
+    },
+    {
+      "name": "sourcesElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "spring-boot-starter-jackson-4.0.8-sources.jar",
+          "url": "spring-boot-starter-jackson-4.0.8-sources.jar",
+          "size": 4741,
+          "sha512": "8f3f7f2c3040646c0c019b40c9deb4aabdd330f1d3c7fe46dfc1f9ff6773610529aff1f5a6b443d9262de78aa8b37980533f9d01b2219c025aab6de47f394bad",
+          "sha256": "440f0eba9127e876473b165140139e52ec658f5ca5a2d4fada4382d618148894",
+          "sha1": "9afb1a670229e3c1c00bbae6482cb66505a9c176",
+          "md5": "984b565388774b32c5726ef13691c792"
+        }
+      ]
+    }
+  ]
+}

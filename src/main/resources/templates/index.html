@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<title>OTI 은행 계좌관리</title>
+	<style>
+		body {
+			margin: 0;
+			font-family: Arial, sans-serif;
+			background: #f3f5f8;
+			color: #172b4d
+		}
+
+		.wrap {
+			max-width: 1000px;
+			margin: auto;
+			padding: 42px 24px
+		}
+
+		header {
+			display: flex;
+			justify-content: space-between;
+			align-items: center
+		}
+
+		h1 {
+			margin: 0
+		}
+
+		.card {
+			background: #fff;
+			padding: 24px;
+			border-radius: 12px;
+			box-shadow: 0 3px 15px #0001;
+			margin-top: 24px
+		}
+
+		a,
+		.btn {
+			display: inline-block;
+			padding: 10px 14px;
+			border-radius: 7px;
+			text-decoration: none;
+			border: 0;
+			background: #1d4e89;
+			color: white;
+			cursor: pointer
+		}
+
+		.sub {
+			background: #e5edf7;
+			color: #172b4d
+		}
+
+		.message {
+			background: #dff5e8;
+			padding: 12px;
+			border-radius: 7px;
+			margin-top: 18px
+		}
+
+		table {
+			width: 100%;
+			border-collapse: collapse;
+			margin-top: 18px
+		}
+
+		th,
+		td {
+			padding: 13px;
+			border-bottom: 1px solid #e2e8f0;
+			text-align: left
+		}
+
+		.amount {
+			text-align: right
+		}
+
+		.empty {
+			color: #64748b;
+			padding: 28px;
+			text-align: center
+		}
+	</style>
+</head>
+
+<body>
+	<main class="wrap">
+		<header>
+			<div>
+				<h1>OTI 은행</h1>
+				<p>계좌관리 시스템 · 총 <strong th:text="${totalCount}">0</strong>개 계좌</p>
+			</div>
+			<div><a class="sub" th:href="@{/accounts/search}">계좌 조회</a> <a th:href="@{/accounts/new}">계좌 등록</a></div>
+		</header>
+		<p class="message" th:if="${message}" th:text="${message}"></p>
+		<section class="card">
+			<h2>전체 계좌 목록</h2>
+			<table th:if="${!#lists.isEmpty(accounts)}">
+				<thead>
+					<tr>
+						<th>계좌번호</th>
+						<th>소유자명</th>
+						<th class="amount">잔액</th>
+						<th>은행 ID</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr th:each="account : ${accounts}">
+						<td><a th:href="@{/accounts/{no}(no=${account.accountNo})}"
+								th:text="${account.accountNo}">100-001</a></td>
+						<td th:text="${account.name}">홍길동</td>
+						<td class="amount" th:text="${#numbers.formatInteger(account.balance,3,'COMMA')} + '원'">0원</td>
+						<td th:text="${account.bankId}">1</td>
+					</tr>
+				</tbody>
+			</table>
+			<p class="empty" th:if="${#lists.isEmpty(accounts)}">등록된 계좌가 없습니다. 계좌를 새로 등록해 주세요.</p>
+		</section>
+	</main>
+</body>
+
+</html>

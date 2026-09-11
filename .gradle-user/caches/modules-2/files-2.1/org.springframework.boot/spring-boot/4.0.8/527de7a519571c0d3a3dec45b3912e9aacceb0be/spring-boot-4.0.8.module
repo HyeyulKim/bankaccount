@@ -1,0 +1,136 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "org.springframework.boot",
+    "module": "spring-boot",
+    "version": "4.0.8",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "9.7.0"
+    }
+  },
+  "variants": [
+    {
+      "name": "apiElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.environment": "standard-jvm",
+        "org.gradle.jvm.version": 17,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api",
+        "org.jetbrains.kotlin.platform.type": "jvm"
+      },
+      "dependencies": [
+        {
+          "group": "org.springframework",
+          "module": "spring-core",
+          "version": {
+            "requires": "7.0.9"
+          }
+        },
+        {
+          "group": "org.springframework",
+          "module": "spring-context",
+          "version": {
+            "requires": "7.0.9"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "spring-boot-4.0.8.jar",
+          "url": "spring-boot-4.0.8.jar",
+          "size": 1372569,
+          "sha512": "506f83095716ccf52d4a2efafd8c07b10fe2336c615c6109b96f2aeba5bf76978723fb4ea8da767a363916f895c3d523620baacd2f2959074f23f3dc4e1324b8",
+          "sha256": "ef1a4917ff5dfd41de20b7441a7830eaeae0a01229998c3aa2f471b96bc2b38f",
+          "sha1": "77dbf5a493af4f18687f9f58242b570a6842cca7",
+          "md5": "a14372d4bfc2a285035faccd8b20c56d"
+        }
+      ]
+    },
+    {
+      "name": "runtimeElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.environment": "standard-jvm",
+        "org.gradle.jvm.version": 17,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime",
+        "org.jetbrains.kotlin.platform.type": "jvm"
+      },
+      "dependencies": [
+        {
+          "group": "org.springframework",
+          "module": "spring-core",
+          "version": {
+            "requires": "7.0.9"
+          }
+        },
+        {
+          "group": "org.springframework",
+          "module": "spring-context",
+          "version": {
+            "requires": "7.0.9"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "spring-boot-4.0.8.jar",
+          "url": "spring-boot-4.0.8.jar",
+          "size": 1372569,
+          "sha512": "506f83095716ccf52d4a2efafd8c07b10fe2336c615c6109b96f2aeba5bf76978723fb4ea8da767a363916f895c3d523620baacd2f2959074f23f3dc4e1324b8",
+          "sha256": "ef1a4917ff5dfd41de20b7441a7830eaeae0a01229998c3aa2f471b96bc2b38f",
+          "sha1": "77dbf5a493af4f18687f9f58242b570a6842cca7",
+          "md5": "a14372d4bfc2a285035faccd8b20c56d"
+        }
+      ]
+    },
+    {
+      "name": "javadocElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "javadoc",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "spring-boot-4.0.8-javadoc.jar",
+          "url": "spring-boot-4.0.8-javadoc.jar",
+          "size": 1827300,
+          "sha512": "4e383c16ebd6ace62536ce0ba5b583307f145e63b108b42e23dbffc5205760336396d36c05c2fa8fa114b24362299e05890d37fcd0ebce0012260fb05fcc9e07",
+          "sha256": "45f90d471891bb10c2273edd2e7d9149b0d8c0fc89f412c3ce4a0d2800cfcf5a",
+          "sha1": "9d0545fae807912df129666d568401a2f2ed2a36",
+          "md5": "c8c58820a2c4cf5ef272a17f39cd247c"
+        }
+      ]
+    },
+    {
+      "name": "sourcesElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "spring-boot-4.0.8-sources.jar",
+          "url": "spring-boot-4.0.8-sources.jar",
+          "size": 851601,
+          "sha512": "9c65ddeefc08c87897229f936c992935a2b606a90931ba0a6c834c113eb2aab4b700ae915b597df336025de2fc3dcd874fb383240bd3a25a10dc26f1d91566e4",
+          "sha256": "93c34f53c5e388c477198b5620e17148d2129d1464fd6b6bd07afa1f8b2cfd89",
+          "sha1": "19725684432d94095e7398d259dce0fc6fa06f30",
+          "md5": "9a73fda682251f9fb1c05a14beccb4ba"
+        }
+      ]
+    }
+  ]
+}

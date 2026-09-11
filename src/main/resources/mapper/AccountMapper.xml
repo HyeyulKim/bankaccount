@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="kr.or.oti.bankaccount.mapper.AccountMapper">
+    <insert id="insert" parameterType="AccountDTO">INSERT INTO account (account_no, name, balance, bank_id) VALUES (#{accountNo}, #{name}, #{balance}, #{bankId})</insert>
+    <select id="findByAccountNo" resultType="AccountDTO">SELECT account_no, name, balance, bank_id FROM account WHERE account_no = #{accountNo}</select>
+    <select id="findAll" resultType="AccountDTO">SELECT account_no, name, balance, bank_id FROM account ORDER BY account_no</select>
+    <select id="findByName" resultType="AccountDTO">SELECT account_no, name, balance, bank_id FROM account WHERE name = #{name} ORDER BY account_no</select>
+    <update id="update" parameterType="AccountDTO">UPDATE account SET name = #{name} WHERE account_no = #{accountNo}</update>
+    <delete id="delete">DELETE FROM account WHERE account_no = #{accountNo}</delete>
+    <update id="deposit">UPDATE account SET balance = balance + #{amount} WHERE account_no = #{accountNo}</update>
+    <update id="withdraw">UPDATE account SET balance = balance - #{amount} WHERE account_no = #{accountNo} AND balance >= #{amount}</update>
+</mapper>

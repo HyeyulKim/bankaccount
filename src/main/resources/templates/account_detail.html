@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<title>계좌 상세</title>
+	<style>
+		body {
+			font-family: Arial, sans-serif;
+			background: #f3f5f8;
+			color: #172b4d
+		}
+
+		.wrap {
+			max-width: 850px;
+			margin: auto;
+			padding: 42px 24px
+		}
+
+		.card {
+			background: #fff;
+			padding: 25px;
+			border-radius: 12px;
+			box-shadow: 0 3px 15px #0001;
+			margin-top: 20px
+		}
+
+		.balance {
+			font-size: 32px;
+			font-weight: bold;
+			color: #1d4e89
+		}
+
+		.forms {
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			gap: 18px
+		}
+
+		.form {
+			padding: 18px;
+			background: #f8fafc;
+			border-radius: 8px
+		}
+
+		input {
+			box-sizing: border-box;
+			width: 100%;
+			padding: 11px;
+			border: 1px solid #cbd5e1;
+			border-radius: 7px;
+			margin: 10px 0
+		}
+
+		button,
+		a {
+			display: inline-block;
+			padding: 11px 14px;
+			border: 0;
+			border-radius: 7px;
+			background: #1d4e89;
+			color: #fff;
+			text-decoration: none;
+			cursor: pointer
+		}
+
+		.withdraw {
+			background: #a33c35
+		}
+
+		.message {
+			padding: 12px;
+			background: #dff5e8;
+			border-radius: 7px
+		}
+	</style>
+</head>
+
+<body>
+	<main class="wrap"><a th:href="@{/accounts}">전체 목록</a>
+		<section class="card">
+			<h1 th:text="${account.name + '님의 계좌'}">계좌 상세</h1>
+			<p>계좌번호: <strong th:text="${account.accountNo}">100-001</strong></p>
+			<p>은행 ID: <span th:text="${account.bankId}">1</span></p>
+			<p class="balance" th:text="${#numbers.formatInteger(account.balance,3,'COMMA')} + '원'">0원</p>
+			<p class="message" th:if="${message}" th:text="${message}"></p>
+		</section>
+		<section class="forms">
+			<div class="form">
+				<h2>입금</h2>
+				<form th:action="@{/accounts/{no}/deposit(no=${account.accountNo})}" method="post"><input name="amount"
+						type="number" min="1" placeholder="입금 금액" required><button type="submit">입금</button></form>
+			</div>
+			<div class="form">
+				<h2>출금</h2>
+				<form th:action="@{/accounts/{no}/withdraw(no=${account.accountNo})}" method="post"><input name="amount"
+						type="number" min="1" placeholder="출금 금액" required><button class="withdraw"
+						type="submit">출금</button></form>
+			</div>
+		</section>
+		<section class="card"><a th:href="@{/accounts/{no}/transactions(no=${account.accountNo})}">거래내역 보기</a></section>
+	</main>
+</body>
+
+</html>

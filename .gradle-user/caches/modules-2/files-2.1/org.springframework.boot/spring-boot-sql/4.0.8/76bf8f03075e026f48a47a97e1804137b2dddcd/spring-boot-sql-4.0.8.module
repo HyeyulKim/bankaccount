@@ -1,0 +1,118 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "org.springframework.boot",
+    "module": "spring-boot-sql",
+    "version": "4.0.8",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "9.7.0"
+    }
+  },
+  "variants": [
+    {
+      "name": "apiElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 17,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api"
+      },
+      "dependencies": [
+        {
+          "group": "org.springframework.boot",
+          "module": "spring-boot",
+          "version": {
+            "requires": "4.0.8"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "spring-boot-sql-4.0.8.jar",
+          "url": "spring-boot-sql-4.0.8.jar",
+          "size": 36059,
+          "sha512": "8825d69ab54d865404e3ea86105092879a7b6427e0715b99a6a2895ee05d9bafcc1d167ecd88b3a791c2c24885cfb0174256b91331b746ce75ab6170aa300bbe",
+          "sha256": "cd88bfdcb52b5aa5b4124c65909cd57c2b414a8a2776c4c087dd75b7427a8e0c",
+          "sha1": "1c5baa4f9d02a39d6d1912c85b50afa5dddca13d",
+          "md5": "1fb0bab14beab977671f8eccc9f351e8"
+        }
+      ]
+    },
+    {
+      "name": "runtimeElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 17,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime"
+      },
+      "dependencies": [
+        {
+          "group": "org.springframework.boot",
+          "module": "spring-boot",
+          "version": {
+            "requires": "4.0.8"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "spring-boot-sql-4.0.8.jar",
+          "url": "spring-boot-sql-4.0.8.jar",
+          "size": 36059,
+          "sha512": "8825d69ab54d865404e3ea86105092879a7b6427e0715b99a6a2895ee05d9bafcc1d167ecd88b3a791c2c24885cfb0174256b91331b746ce75ab6170aa300bbe",
+          "sha256": "cd88bfdcb52b5aa5b4124c65909cd57c2b414a8a2776c4c087dd75b7427a8e0c",
+          "sha1": "1c5baa4f9d02a39d6d1912c85b50afa5dddca13d",
+          "md5": "1fb0bab14beab977671f8eccc9f351e8"
+        }
+      ]
+    },
+    {
+      "name": "javadocElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "javadoc",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "spring-boot-sql-4.0.8-javadoc.jar",
+          "url": "spring-boot-sql-4.0.8-javadoc.jar",
+          "size": 163436,
+          "sha512": "3e3da3759b747b1bac8cf2cdba9e062dc468feecabc3461d74f244e8fbfc2c8cd68755bac8d80b913e1ea4d2614e52bd241689a61dcdd3a9047a646993a05408",
+          "sha256": "76aae4b34e4790da1df9477fd1ebd55dc5df02389be67d16603f4c958c3571e0",
+          "sha1": "c8d66583d7d567cdb41a363734344925feb1ec94",
+          "md5": "1eecad482359a588a72aafffa06d8d3d"
+        }
+      ]
+    },
+    {
+      "name": "sourcesElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "spring-boot-sql-4.0.8-sources.jar",
+          "url": "spring-boot-sql-4.0.8-sources.jar",
+          "size": 30638,
+          "sha512": "ee82b406b52c15f55e867466fac3f97c8f046000fcca401be5e5a6bde3a1acc941756549a53e5879e5d7ffd5245b55be9dc1a28bd7f89fd0dfddd5dbe3e8c054",
+          "sha256": "e929a38a46f34672b4a7dfe27faee6bfcc0065ae53e89b637ce4ebe515d3ccce",
+          "sha1": "f85f67f1dc804c83b4fbadd31d17576e494bf504",
+          "md5": "5e76ee8a5f1e19a3162b502819ac43f3"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,146 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "org.springframework.boot",
+    "module": "spring-boot-webmvc-test",
+    "version": "4.0.8",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "9.7.0"
+    }
+  },
+  "variants": [
+    {
+      "name": "apiElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 17,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api"
+      },
+      "dependencies": [
+        {
+          "group": "org.springframework.boot",
+          "module": "spring-boot-test-autoconfigure",
+          "version": {
+            "requires": "4.0.8"
+          }
+        },
+        {
+          "group": "org.springframework.boot",
+          "module": "spring-boot-webmvc",
+          "version": {
+            "requires": "4.0.8"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "spring-boot-webmvc-test-4.0.8.jar",
+          "url": "spring-boot-webmvc-test-4.0.8.jar",
+          "size": 45817,
+          "sha512": "baade0b9e26161664ce668013bfc7c6b064dcad5dd30b8b394d3df55946d0f6428cdb62b17650cb202df84a3ae711ff8581d5969fa4932721c19719d73786658",
+          "sha256": "48c3159ea0c8feb8aa033f845689c4a6b1065a3ddc0aff204c0565ac473f4c4e",
+          "sha1": "7835deb4d4e37ffcd4111a77783e6979efabc952",
+          "md5": "b59cf7c132d4c40517bf063e748ab24f"
+        }
+      ]
+    },
+    {
+      "name": "runtimeElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 17,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime"
+      },
+      "dependencies": [
+        {
+          "group": "org.springframework.boot",
+          "module": "spring-boot-http-converter",
+          "version": {
+            "requires": "4.0.8"
+          }
+        },
+        {
+          "group": "org.springframework.boot",
+          "module": "spring-boot-web-server",
+          "version": {
+            "requires": "4.0.8"
+          }
+        },
+        {
+          "group": "org.springframework.boot",
+          "module": "spring-boot-test-autoconfigure",
+          "version": {
+            "requires": "4.0.8"
+          }
+        },
+        {
+          "group": "org.springframework.boot",
+          "module": "spring-boot-webmvc",
+          "version": {
+            "requires": "4.0.8"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "spring-boot-webmvc-test-4.0.8.jar",
+          "url": "spring-boot-webmvc-test-4.0.8.jar",
+          "size": 45817,
+          "sha512": "baade0b9e26161664ce668013bfc7c6b064dcad5dd30b8b394d3df55946d0f6428cdb62b17650cb202df84a3ae711ff8581d5969fa4932721c19719d73786658",
+          "sha256": "48c3159ea0c8feb8aa033f845689c4a6b1065a3ddc0aff204c0565ac473f4c4e",
+          "sha1": "7835deb4d4e37ffcd4111a77783e6979efabc952",
+          "md5": "b59cf7c132d4c40517bf063e748ab24f"
+        }
+      ]
+    },
+    {
+      "name": "javadocElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "javadoc",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "spring-boot-webmvc-test-4.0.8-javadoc.jar",
+          "url": "spring-boot-webmvc-test-4.0.8-javadoc.jar",
+          "size": 149713,
+          "sha512": "a8718f1f29530c8226d2bb85884aad875ba31d5cf34b03154835bd9adbd898bf2f626797f0966d091a3bd3c0b73d902f43eba38716f0b82b1b0ee2f3f06b3080",
+          "sha256": "a8f125be49e80927dd5e14479fa4d12647eb2b22120bec325f646ad05c752a9b",
+          "sha1": "c05fd6ed01169b2ef8cc1d42f8392bd0c7476ac3",
+          "md5": "6b2bb61a7cd52264ed15e8c546ac5b90"
+        }
+      ]
+    },
+    {
+      "name": "sourcesElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "spring-boot-webmvc-test-4.0.8-sources.jar",
+          "url": "spring-boot-webmvc-test-4.0.8-sources.jar",
+          "size": 33400,
+          "sha512": "78e349d413911c38ba62bec1d66d1615a86b69cc69547aeb4020df88dab3e5acdc6c7cb2a046e9773cb1d006eb88304d73bb5ccfd01f18c03d6dbae5573e1c2c",
+          "sha256": "b9f2813627d136ee8fb68a1ef228bccc32e30a6e09bb44d1a4f67789c693ef3e",
+          "sha1": "e4c3106d20207eea3537302c4655c686989a0dac",
+          "md5": "15ad64aa4ee43104f9a2fdf16322e6e4"
+        }
+      ]
+    }
+  ]
+}

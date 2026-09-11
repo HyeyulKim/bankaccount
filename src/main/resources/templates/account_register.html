@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<title>계좌 등록</title>
+	<style>
+		body {
+			font-family: Arial, sans-serif;
+			background: #f3f5f8;
+			color: #172b4d
+		}
+
+		.wrap {
+			max-width: 620px;
+			margin: 50px auto;
+			background: #fff;
+			padding: 32px;
+			border-radius: 12px;
+			box-shadow: 0 3px 15px #0001
+		}
+
+		label {
+			display: block;
+			margin-top: 18px;
+			font-weight: bold
+		}
+
+		input,
+		select {
+			box-sizing: border-box;
+			width: 100%;
+			padding: 12px;
+			margin-top: 7px;
+			border: 1px solid #cbd5e1;
+			border-radius: 7px
+		}
+
+		button,
+		a {
+			margin-top: 24px;
+			padding: 11px 16px;
+			border: 0;
+			border-radius: 7px;
+			background: #1d4e89;
+			color: #fff;
+			text-decoration: none;
+			cursor: pointer
+		}
+
+		.secondary {
+			background: #e5edf7;
+			color: #172b4d;
+			margin-left: 6px
+		}
+
+		.notice {
+			padding: 12px;
+			background: #fff7df;
+			border-radius: 7px
+		}
+	</style>
+</head>
+
+<body>
+	<main class="wrap">
+		<h1>계좌 등록</h1>
+		<p>은행을 선택하고 새 계좌 정보를 입력하세요.</p>
+		<p class="notice" th:if="${#lists.isEmpty(banks)}">먼저 은행 데이터를 등록해야 계좌를 만들 수 있습니다.</p>
+		<form th:action="@{/accounts}" th:object="${account}" method="post"><label>은행</label><select
+				th:field="*{bankId}" required>
+				<option value="">은행 선택</option>
+				<option th:each="bank : ${banks}" th:value="${bank.bankId}"
+					th:text="${bank.bankName + ' (ID: ' + bank.bankId + ')'}">은행</option>
+			</select><label>계좌번호</label><input th:field="*{accountNo}" placeholder="예: 100-001"
+				required><label>소유자명</label><input th:field="*{name}" placeholder="예: 홍길동" required><button
+				type="submit">계좌 등록</button><a class="secondary" th:href="@{/accounts}">취소</a></form>
+	</main>
+</body>
+
+</html>
