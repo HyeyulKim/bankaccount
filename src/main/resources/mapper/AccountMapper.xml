@@ -9,4 +9,12 @@
     <delete id="delete">DELETE FROM account WHERE account_no = #{accountNo}</delete>
     <update id="deposit">UPDATE account SET balance = balance + #{amount} WHERE account_no = #{accountNo}</update>
     <update id="withdraw">UPDATE account SET balance = balance - #{amount} WHERE account_no = #{accountNo} AND balance >= #{amount}</update>
+
+    <!-- 거래내역 조회-기환 -->
+    <select id="selectTransactionsByAccountNo" resultType="kr.or.oti.bankaccount.dto.TransactionDTO">
+        SELECT TRANSACTION_ID, TRANSACTION_DATETIME, KIND, AMOUNT, BALANCE, ACCOUNT_NO
+        FROM "TRANSACTION"
+        WHERE ACCOUNT_NO = #{accountNo}
+        ORDER BY TRANSACTION_DATETIME DESC
+    </select>
 </mapper>
