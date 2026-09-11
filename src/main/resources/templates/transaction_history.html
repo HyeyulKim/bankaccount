@@ -68,7 +68,7 @@
 	<main class="wrap"><a th:href="@{/accounts/{no}(no=${account.accountNo})}">계좌 상세</a>
 		<section class="card">
 			<h1 th:text="${account.accountNo + ' 거래내역'}">거래내역</h1>
-			<p th:text="${account.name + ' · 현재 잔액 ' + #numbers.formatInteger(account.balance,3,'COMMA') + '원'}">계좌 정보
+			<p th:text="${account.name + ' · 현재 잔액 ' + #numbers.formatInteger(account.balance,1,'COMMA') + '원'}">계좌 정보
 			</p>
 			<table th:if="${!#lists.isEmpty(transactions)}">
 				<thead>
@@ -83,8 +83,8 @@
 					<tr th:each="tx : ${transactions}">
 						<td th:text="${#temporals.format(tx.transactionDatetime,'yyyy-MM-dd HH:mm:ss')}">시간</td>
 						<td th:text="${tx.kind}" th:classappend="${tx.kind == '입금'} ? 'in' : 'out'">입금</td>
-						<td th:text="${#numbers.formatInteger(tx.amount,3,'COMMA')} + '원'">0원</td>
-						<td th:text="${#numbers.formatInteger(tx.balance,3,'COMMA')} + '원'">0원</td>
+						<td th:text="${#numbers.formatInteger(tx.amount,1,'COMMA')} + '원'">0원</td>
+						<td th:text="${#numbers.formatInteger(tx.balance,1,'COMMA')} + '원'">0원</td>
 					</tr>
 				</tbody>
 			</table>
