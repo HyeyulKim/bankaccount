@@ -1,6 +1,7 @@
 package kr.or.oti.bankaccount.controller;
 
 import java.util.List;
+import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
@@ -36,10 +37,26 @@ public class AccountController {
     }
 
     @PostMapping
-    public String register(@ModelAttribute AccountDTO account, RedirectAttributes redirectAttributes) {
-        accountService.create(account);
-        redirectAttributes.addFlashAttribute("message", "계좌가 등록되었습니다.");
-        return "redirect:/accounts";
+    public String register(@ModelAttribute AccountDTO account, RedirectAttributes redirectAttributes, Model model) {
+        if (account.getAccountNo() == null || account.getAccountNo().isBlank()
+                || account.getName() == null || account.getName().isBlank()) {
+            model.addAttribute("banks", bankService.getAll());
+            model.addAttribute("error", "계좌번호와 소유자명을 모두 입력해 주세요.");
+            return "account_register";
+        }
+        try {
+            accountService.create(account);
+            redirectAttributes.addFlashAttribute("message", "계좌가 등록되었습니다.");
+            return "redirect:/accounts";
+        } catch (ResponseStatusException e) {
+            model.addAttribute("banks", bankService.getAll());
+            model.addAttribute("error", e.getReason());
+            return "account_register";
+        } catch (DataIntegrityViolationException e) {
+            model.addAttribute("banks", bankService.getAll());
+            model.addAttribute("error", "이미 등록된 계좌번호입니다.");
+            return "account_register";
+        }
     }
 
     @GetMapping("/search")
