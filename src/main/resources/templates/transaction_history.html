@@ -17,6 +17,13 @@
 			margin: auto;
 			padding: 42px 24px
 		}
+		
+		.header-nav {
+					display: flex;
+					justify-content: space-between;
+					align-items: center;
+					margin-bottom: 20px;
+				}
 
 		.card {
 			background: #fff;
@@ -65,7 +72,10 @@
 </head>
 
 <body>
-	<main class="wrap"><a th:href="@{/accounts/{no}(no=${account.accountNo})}">계좌 상세</a>
+	<main class="wrap">	<div class="header-nav">
+				<a th:href="@{/accounts/{no}(no=${account.accountNo})}">계좌 상세</a>
+				<a th:href="@{/accounts}">전체 목록</a>
+			</div>
 		<section class="card">
 			<h1 th:text="${account.accountNo + ' 거래내역'}">거래내역</h1>
 			<p th:text="${account.name + ' · 현재 잔액 ' + #numbers.formatInteger(account.balance,1,'COMMA') + '원'}">계좌 정보
