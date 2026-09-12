@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="kr.or.oti.bankaccount.mapper.TransactionMapper">
-    <insert id="insert" parameterType="TransactionDTO" useGeneratedKeys="true" keyProperty="transactionId">
+    <insert id="insert" parameterType="TransactionDTO" useGeneratedKeys="true" keyProperty="transactionId" keyColumn="TRANSACTION_ID">
         INSERT INTO "TRANSACTION" (transaction_datetime, kind, amount, balance, account_no)
         VALUES (#{transactionDatetime}, #{kind}, #{amount}, #{balance}, #{accountNo})
     </insert>
