@@ -10,19 +10,41 @@
 			margin: 0;
 			font-family: Arial, sans-serif;
 			background: #f3f5f8;
-			color: #172b4d
-		}
-
-		.wrap {
-			max-width: 1000px;
-			margin: auto;
-			padding: 42px 24px
-		}
-
-		header {
+			color: #172b4d;
 			display: flex;
-			justify-content: space-between;
-			align-items: center
+		}
+
+		.sidebar {
+			width: 220px;
+			min-height: 100vh;
+			background: #1d4e89;
+			color: #fff;
+			padding: 24px 16px;
+			box-sizing: border-box;
+			flex-shrink: 0;
+		}
+
+		.sidebar h2 {
+			margin: 0 0 24px;
+			font-size: 18px;
+		}
+
+		.sidebar a {
+			display: block;
+			color: #e5edf7;
+			text-decoration: none;
+			padding: 10px 12px;
+			border-radius: 7px;
+			margin-bottom: 6px;
+		}
+
+		.sidebar a:hover {
+			background: #163f6e;
+		}
+
+		.content {
+			flex: 1;
+			padding: 42px 24px;
 		}
 
 		h1 {
@@ -37,7 +59,7 @@
 			margin-top: 24px
 		}
 
-		a,
+		a.btn,
 		.btn {
 			display: inline-block;
 			padding: 10px 14px;
@@ -87,13 +109,13 @@
 </head>
 
 <body>
-	<main class="wrap">
+	<nav th:replace="~{fragments/nav :: sideNav}"></nav>
+	<main class="content">
 		<header>
 			<div>
-				<h1>OTI 은행</h1>
+				<h1>전체 계좌 목록</h1>
 				<p>계좌관리 시스템 · 총 <strong th:text="${totalCount}">0</strong>개 계좌</p>
 			</div>
-			<div><a class="sub" th:href="@{/accounts/search}">계좌 조회</a> <a th:href="@{/accounts/new}">계좌 등록</a></div>
 		</header>
 		<p class="message" th:if="${message}" th:text="${message}"></p>
 		<section class="card">
@@ -109,7 +131,7 @@
 				</thead>
 				<tbody>
 					<tr th:each="account : ${accounts}">
-						<td><a th:href="@{/accounts/{no}(no=${account.accountNo})}"
+						<td><a class="btn" th:href="@{/accounts/{no}(no=${account.accountNo})}"
 								th:text="${account.accountNo}">100-001</a></td>
 						<td th:text="${account.name}">홍길동</td>
 						<td class="amount" th:text="${#numbers.formatInteger(account.balance,1,'COMMA')} + '원'">0원</td>

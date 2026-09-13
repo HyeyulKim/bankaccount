@@ -7,14 +7,44 @@
 	<title>계좌 상세</title>
 	<style>
 		body {
+			margin: 0;
 			font-family: Arial, sans-serif;
 			background: #f3f5f8;
-			color: #172b4d
+			color: #172b4d;
+			display: flex;
 		}
 
-		.wrap {
+		.sidebar {
+			width: 220px;
+			min-height: 100vh;
+			background: #1d4e89;
+			color: #fff;
+			padding: 24px 16px;
+			box-sizing: border-box;
+			flex-shrink: 0;
+		}
+
+		.sidebar h2 {
+			margin: 0 0 24px;
+			font-size: 18px;
+		}
+
+		.sidebar a {
+			display: block;
+			color: #e5edf7;
+			text-decoration: none;
+			padding: 10px 12px;
+			border-radius: 7px;
+			margin-bottom: 6px;
+		}
+
+		.sidebar a:hover {
+			background: #163f6e;
+		}
+
+		.content {
+			flex: 1;
 			max-width: 850px;
-			margin: auto;
 			padding: 42px 24px
 		}
 
@@ -26,6 +56,12 @@
 			margin-top: 20px
 		}
 
+		.card-header {
+			display: flex;
+			justify-content: space-between;
+			align-items: flex-start;
+		}
+
 		.balance {
 			font-size: 32px;
 			font-weight: bold;
@@ -33,9 +69,10 @@
 		}
 
 		.forms {
-			display: grid;
-			grid-template-columns: 1fr 1fr;
-			gap: 18px
+		    display: grid;
+		    grid-template-columns: 1fr 1fr;
+		    gap: 18px;
+		    margin-top: 20px
 		}
 
 		.form {
@@ -54,7 +91,7 @@
 		}
 
 		button,
-		a {
+		.btn {
 			display: inline-block;
 			padding: 11px 14px;
 			border: 0;
@@ -78,9 +115,13 @@
 </head>
 
 <body>
-	<main class="wrap"><a th:href="@{/accounts}">전체 목록</a>
+	<nav th:replace="~{fragments/nav :: sideNav}"></nav>
+	<main class="content">
 		<section class="card">
-			<h1 th:text="${account.name + '님의 계좌'}">계좌 상세</h1>
+			<div class="card-header">
+				<h1 th:text="${account.name + '님의 계좌'}">계좌 상세</h1>
+				<a class="btn" th:href="@{/accounts/{no}/transactions(no=${account.accountNo})}">거래내역 보기</a>
+			</div>
 			<p>계좌번호: <strong th:text="${account.accountNo}">100-001</strong></p>
 			<p>은행 ID: <span th:text="${account.bankId}">1</span></p>
 			<p class="balance" th:text="${#numbers.formatInteger(account.balance,1,'COMMA')} + '원'">0원</p>
@@ -99,7 +140,6 @@
 						type="submit">출금</button></form>
 			</div>
 		</section>
-		<section class="card"><a th:href="@{/accounts/{no}/transactions(no=${account.accountNo})}">거래내역 보기</a></section>
 	</main>
 </body>
 

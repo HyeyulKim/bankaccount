@@ -7,14 +7,44 @@
 	<title>계좌 조회</title>
 	<style>
 		body {
+			margin: 0;
 			font-family: Arial, sans-serif;
 			background: #f3f5f8;
-			color: #172b4d
+			color: #172b4d;
+			display: flex;
 		}
 
-		.wrap {
+		.sidebar {
+			width: 220px;
+			min-height: 100vh;
+			background: #1d4e89;
+			color: #fff;
+			padding: 24px 16px;
+			box-sizing: border-box;
+			flex-shrink: 0;
+		}
+
+		.sidebar h2 {
+			margin: 0 0 24px;
+			font-size: 18px;
+		}
+
+		.sidebar a {
+			display: block;
+			color: #e5edf7;
+			text-decoration: none;
+			padding: 10px 12px;
+			border-radius: 7px;
+			margin-bottom: 6px;
+		}
+
+		.sidebar a:hover {
+			background: #163f6e;
+		}
+
+		.content {
+			flex: 1;
 			max-width: 900px;
-			margin: auto;
 			padding: 42px 24px
 		}
 
@@ -27,21 +57,29 @@
 		}
 
 		input {
-			padding: 11px;
-			border: 1px solid #cbd5e1;
-			border-radius: 7px;
-			margin-right: 6px
+		    box-sizing: border-box;
+		    padding: 11px;
+		    border: 1px solid #cbd5e1;
+		    border-radius: 7px;
+		    margin-right: 6px;
+		    font: inherit;
+		    vertical-align: middle;
 		}
 
 		button,
-		a {
-			padding: 11px 14px;
-			border: 0;
-			border-radius: 7px;
-			background: #1d4e89;
-			color: #fff;
-			text-decoration: none;
-			cursor: pointer
+		.btn {
+		    display: inline-block;
+		    box-sizing: border-box;
+		    padding: 11px 14px;
+		    border: 0;
+		    border-radius: 7px;
+		    background: #1d4e89;
+		    color: #fff;
+		    text-decoration: none;
+		    cursor: pointer;
+		    font: inherit;
+		    line-height: 1.2;
+		    vertical-align: middle;
 		}
 
 		table {
@@ -64,7 +102,8 @@
 </head>
 
 <body>
-	<main class="wrap"><a th:href="@{/accounts}">전체 목록</a>
+	<nav th:replace="~{fragments/nav :: sideNav}"></nav>
+	<main class="content">
 		<h1>계좌 조회</h1>
 		<section class="card">
 			<form th:action="@{/accounts/search}" method="get"><input name="accountNo" th:value="${accountNo}"
@@ -83,7 +122,7 @@
 				</thead>
 				<tbody>
 					<tr th:each="account : ${results}">
-						<td><a th:href="@{/accounts/{no}(no=${account.accountNo})}"
+						<td><a class="btn" th:href="@{/accounts/{no}(no=${account.accountNo})}"
 								th:text="${account.accountNo}">번호</a></td>
 						<td th:text="${account.name}">이름</td>
 						<td th:text="${#numbers.formatInteger(account.balance,1,'COMMA')} + '원'">0원</td>
