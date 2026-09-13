@@ -7,18 +7,56 @@
 	<title>계좌 등록</title>
 	<style>
 		body {
+			margin: 0;
 			font-family: Arial, sans-serif;
 			background: #f3f5f8;
-			color: #172b4d
+			color: #172b4d;
+			display: flex;
 		}
 
-		.wrap {
+		.sidebar {
+			width: 220px;
+			min-height: 100vh;
+			background: #1d4e89;
+			color: #fff;
+			padding: 24px 16px;
+			box-sizing: border-box;
+			flex-shrink: 0;
+		}
+
+		.sidebar h2 {
+			margin: 0 0 24px;
+			font-size: 18px;
+		}
+
+		.sidebar a {
+			display: block;
+			color: #e5edf7;
+			text-decoration: none;
+			padding: 10px 12px;
+			border-radius: 7px;
+			margin-bottom: 6px;
+		}
+
+		.sidebar a:hover {
+			background: #163f6e;
+		}
+
+		.content {
+			flex: 1;
+			padding: 42px 24px;
+			display: flex;
+			justify-content: center;
+		}
+
+		.form-card {
 			max-width: 620px;
-			margin: 50px auto;
+			width: 100%;
 			background: #fff;
 			padding: 32px;
 			border-radius: 12px;
-			box-shadow: 0 3px 15px #0001
+			box-shadow: 0 3px 15px #0001;
+			height: fit-content
 		}
 
 		label {
@@ -38,15 +76,20 @@
 		}
 
 		button,
-		a {
-			margin-top: 24px;
-			padding: 11px 16px;
-			border: 0;
-			border-radius: 7px;
-			background: #1d4e89;
-			color: #fff;
-			text-decoration: none;
-			cursor: pointer
+		.btn {
+		    display: inline-block;
+		    margin-top: 24px;
+		    padding: 11px 16px;
+		    border: 0;
+		    border-radius: 7px;
+		    background: #1d4e89;
+		    color: #fff;
+		    text-decoration: none;
+		    cursor: pointer;
+		    font: inherit;
+		    line-height: 1.2;
+		    vertical-align: middle;
+		    box-sizing: border-box;
 		}
 
 		.secondary {
@@ -67,19 +110,22 @@
 </head>
 
 <body>
-	<main class="wrap">
-		<h1>계좌 등록</h1>
-		<p>은행을 선택하고 새 계좌 정보를 입력하세요.</p>
-		<p class="notice" th:if="${#lists.isEmpty(banks)}">먼저 은행 데이터를 등록해야 계좌를 만들 수 있습니다.</p>
-		<p class="error" th:if="${error}" th:text="${error}">등록 오류</p>
-		<form th:action="@{/accounts}" th:object="${account}" method="post"><label>은행</label><select
-				th:field="*{bankId}" required>
-				<option value="">은행 선택</option>
-				<option th:each="bank : ${banks}" th:value="${bank.bankId}"
-					th:text="${bank.bankName + ' (ID: ' + bank.bankId + ')'}">은행</option>
-			</select><label>계좌번호</label><input th:field="*{accountNo}" placeholder="예: 100-001"
-				pattern="[A-Za-z0-9-]{1,30}" maxlength="30" title="영문, 숫자, 하이픈(-)만 입력할 수 있습니다." required><label>소유자명</label><input th:field="*{name}" placeholder="예: 홍길동" maxlength="50" required><button
-				type="submit" th:disabled="${#lists.isEmpty(banks)}">계좌 등록</button><a class="secondary" th:href="@{/accounts}">취소</a></form>
+	<nav th:replace="~{fragments/nav :: sideNav}"></nav>
+	<main class="content">
+		<div class="form-card">
+			<h1>계좌 등록</h1>
+			<p>은행을 선택하고 새 계좌 정보를 입력하세요.</p>
+			<p class="notice" th:if="${#lists.isEmpty(banks)}">먼저 은행 데이터를 등록해야 계좌를 만들 수 있습니다.</p>
+			<p class="error" th:if="${error}" th:text="${error}">등록 오류</p>
+			<form th:action="@{/accounts}" th:object="${account}" method="post"><label>은행</label><select
+					th:field="*{bankId}" required>
+					<option value="">은행 선택</option>
+					<option th:each="bank : ${banks}" th:value="${bank.bankId}"
+						th:text="${bank.bankName + ' (ID: ' + bank.bankId + ')'}">은행</option>
+				</select><label>계좌번호</label><input th:field="*{accountNo}" placeholder="예: 100-001"
+					pattern="[A-Za-z0-9-]{1,30}" maxlength="30" title="영문, 숫자, 하이픈(-)만 입력할 수 있습니다." required><label>소유자명</label><input th:field="*{name}" placeholder="예: 홍길동" maxlength="50" required><button
+					type="submit" th:disabled="${#lists.isEmpty(banks)}">계좌 등록</button><a class="btn secondary" th:href="@{/accounts}">취소</a></form>
+		</div>
 	</main>
 </body>
 

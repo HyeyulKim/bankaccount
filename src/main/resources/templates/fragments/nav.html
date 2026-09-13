@@ -1,0 +1,11 @@
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org">
+<body>
+<nav th:fragment="sideNav" class="sidebar">
+    <h2>OTI 은행</h2>
+    <a th:href="@{/accounts}">전체 계좌 목록</a>
+    <a th:href="@{/accounts/new}">계좌 등록</a>
+    <a th:href="@{/accounts/search}">계좌 조회</a>
+</nav>
+</body>
+</html>
